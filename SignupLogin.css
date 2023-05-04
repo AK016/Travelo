@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top:10% ;
+}
+
+#container {
+    height: 500px;
+    width: 600px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 20%; */
+}
+
+#container>div input{
+     display: block;
+     width: 200px;
+     height: 30px;
+     margin-bottom: 10px;
+     /* border-radius: 40%; */
+
+}
+#container>div{
+    margin-top: 10%;
+}
+
+
