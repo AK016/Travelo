@@ -1,0 +1,6 @@
+
+GET https://644fd9a0ba9f39c6ab6e09a7.mockapi.io/travelplan
+
+###
+
+POST 
