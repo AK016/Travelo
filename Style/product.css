@@ -2,10 +2,11 @@ body {
   margin: 0px;
   padding: 0px;
   /* width: 70%; */
+  background-color:rgb(238, 238, 238);
 }
 
 .part1 {
-  background-color: rgb(249, 249, 249);
+  background-color: rgb(180, 180, 180);
   min-height: 200px;
   margin-top: -30px;
 }
@@ -64,6 +65,229 @@ nav {
     font-size: 20px;
     margin-top: 5px;
 }
+
+
+
+/* main body starts here  */
+#main{
+  width: 90%;
+  margin:30px auto;
+  display: flex;
+}
+#main hr{
+  margin-left: 0px;
+}
+.filters{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 500px;
+  left: 0;
+  /* background-color: white; */
+  /* border:1px solid red */
+}
+.filters hr{
+  margin-top: 20px;
+  min-width: 400px;
+}
+/* price filter  */
+.pricefilter{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.pricefilter div{
+  display: flex;
+}
+.pricefilter p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 38px;
+}
+.pricefilter div button{
+  margin-top: -20px;
+  height: 40px;
+  width: 200px;
+  margin-right: 20px;
+  border: none;
+  background-color: rgb(249, 249, 249);
+  font-size: 22px;
+  border-radius: 20px;
+}
+.pricefilter div button:hover{
+  background-color: aliceblue;
+  color: cornflowerblue;
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+}
+
+/* country filter starts here  */
+.country{
+  display: flex;
+  flex-direction: column;
+}
+.country p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px; 
+}
+.country input{
+  min-width: 400px;
+  height: 40px;
+  border: none;
+  background-color: rgb(249, 249, 249);
+  font-size: 20px;
+  border-radius: 20px;
+  text-align: center;
+  align-self: center;
+  margin-top: -10px;
+}
+
+.country input:hover{
+  background-color: aliceblue;
+  color: black;
+}
+
+.plan div{
+  max-width: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.plan p{
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.plan input{
+  margin-top: -10px;
+}
+.plan div p{
+  font-size: 16px;
+  margin-top: -20px;
+}
+.plan button{
+  margin-top: 10px;
+  height: 40px;
+  width: 200px;
+  margin-right: 20px;
+  border: none;
+  background-color: rgb(249, 249, 249);
+  font-size: 22px;
+  border-radius: 20px;
+}
+.plan button:hover{
+  background-color: aliceblue;
+  color: cornflowerblue;
+}
+
+
+
+
+
+/* display dom part  */
+.cardlist{
+  display: flex;
+  flex-direction: column;
+}
+.card{
+  width: 90%;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.cardImg img{
+  min-width: 299px;
+  max-width: 350px;
+  min-height: 230px;
+  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.cardImg img:hover{
+  transform: scale3d(1.1, 1.1, 1);
+}
+.cardBody{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.location{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+.country{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  margin-top: -18px;
+}
+.price{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+.plan{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: -13px;
+  margin-bottom: 25px;
+}
+.description{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  margin-top: -15px;
+  text-align: justify;
+}
+
+.booknow{
+  height: 40px;
+  width: 200px;
+  margin-left: 30%;
+  border: none;
+  font-size: 22px;
+  border-radius: 10px;
+}
+.booknow:hover{
+  background-color: aliceblue;
+}
+
+.pagination{
+  /* border: 2px red solid; */
+  width: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.pagination a{
+  background-color: aliceblue;
+  padding: 5px;
+  text-decoration: none;
+  color: red;
+  border-radius: 5px;
+  font-size: 28px;
+}
+
+
+#search{
+  width: 400px;
+  height: 40px;
+  margin-left: 35%;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  font-size: 24px;
+}
+.results{
+  text-align: center;
+  margin-bottom: -30px;
+}
+
+
+
+
+
 
 
 

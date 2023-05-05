@@ -42,11 +42,57 @@
             </div>
         </nav>
     </div>
+    <div id="main">
+        <div class="filters">
+            <div class="pricefilter">
+                <p>Price</p>
+                <div>
+                    <button id="lowtohigh">Low to High</button>
+                    <button id="hightolow">High to Low</button>
+                </div>
+            </div>
+            <hr>
+            <div class="country">
+                <p>Search Any Country</p>
+                <input type="text" id="country" placeholder="Search any country name" required>
+            </div>
+            <hr>
+            <div class="plan">
+                <p>Holiday Range</p>
+                <div class="range">
+                    <p><span id="rangeValue"></span> Days</p>
+                    <input type="range" min="1" max="20" step="1" value="0" id="myRange">
+                    <button id="check">Check</button>
+                    <button id="cancel" style="display: none;">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="products">
+            <div class="searchtitle">
+                <input type="text" id="search" placeholder="Search Any Place">
+            </div>
+            <div class="results" style="display: none;">
+                <h1 id="resH1">Search Something</h1>
+            </div>
+            <div class="cardlist">
+                <!-- append here  -->
+            </div>
+            <div class="pagination">
+                <!-- append pagination btns  -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer  -->
     <div class="part7" id="part7">
         <div id="footer">
             <div class="seg1">
                 <div class="div1">
-                    <div><h2>Leading the way <br> in adventure</h2></div>
+                    <div>
+                        <h2>Leading the way <br> in adventure</h2>
+                    </div>
                     <div class="social">
                         <a href="#"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
@@ -64,7 +110,8 @@
             <div class="seg2">
                 <div class="left4">
                     <h1>Travelo</h1>
-                    <p>Travel plans are not really an instrument themselves but a delivery mechanism or strategy for other mostly</p>
+                    <p>Travel plans are not really an instrument themselves but a delivery mechanism or strategy for
+                        other mostly</p>
                 </div>
                 <div class="right4">
                     <div>
@@ -92,5 +139,6 @@
     </div>
 </body>
 <script src="https://kit.fontawesome.com/b2fe669610.js" crossorigin="anonymous"></script>
-<script src="./product.js"></script>
+<script src="/Scripts/product.js"></script>
+
 </html>
