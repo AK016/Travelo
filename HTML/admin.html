@@ -1,56 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin_Page</title>
-    <link rel="stylesheet" href="../Style/admin.css">
-    <link rel="stylesheet" href="../Style/nav.css">
+    <link rel="shortcut icon" href="/images/pngtree-initials-t-logo-vector-abstract-image_307450-removebg-preview.png"
+        type="jpeg/png">
+    <link rel="stylesheet" href="/Style/admin.css">
 </head>
+
 <body>
- 
-    <nav>
-        <div id="logo">
-            <a href="./index.html"><h1>Travelo</h1></a>
-        </div>
-        <div class="anchors">
-            <div class="anchorsubs">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
+    <div class="nav">
+        <hr>
+        <nav>
+            <div id="logo">
+                <a href="./index.html">
+                    <h1 id="travelo">Travelo</h1>
+                </a>
             </div>
-            <div class="anchorsubs">
-                <a href="#">Destination</a>
-                <a href="#">Features</a>
+            <div class="anchors">
+                <div class="anchorsubs">
+                    <a href="./index.html">Home</a>
+                </div>
+                <div class="anchorsubs">
+                    <a href="./product.html">Destination</a>
+                    <!-- <a href="#part3" id="features">Features</a> -->
+                </div>
+                <!-- <div class="anchorsubs">
+                    <a href="#">Pricing</a>
+                    <a href="#">Reviews</a> -->
+                <!-- </div> -->
+                <!-- <div class="anchorsubs">
+                    <a href="#part7" id="aboutus">About Us</a>
+                </div> -->
+                <div class="anchorsubs">
+                    <a href="#" id="email-link">CONTACT US <i class="fa-solid fa-circle-arrow-right fa-beat"
+                            style="color: #000000;"></i></a>
+                </div>
             </div>
-            <div class="anchorsubs">
-                <a href="#">Pricing</a>
-                <a href="#">Reviews</a>
-            </div>
-            <div class="anchorsubs">
-                <a href="#">CONTACT US <i class="fa-solid fa-circle-arrow-right fa-beat" style="color: #000000;"></i></a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="admin_container">
-     <div class="form">
-        <h2>Admin Form</h2>
-        <form id="admin_form" action="">
-            <input id="location" type="text" placeholder="Location">
-            <input  id="image" type="text" placeholder="Image">
-            <input id="plan" type="text" placeholder="Plan">
-            <input id="Price" type="text"  placeholder = "Price">
-            <input id="country" type="text" placeholder="Country">
-            <input id="description" type="text" placeholder="Description">
-            <input class="submit" type="submit">
-        </form>
-     </div>
-
+        </nav>
     </div>
+    
+
+    <div class="container">
+        <div class="left-div">
+            <div class="add">
+                <div class="form">
+                    <div>
+                        <h2>Add Data</h2>
+                        <button class="add_update" id="update">Update Data?</button>
+                    </div>
+                    <form id="admin_form" action="">
+                        <input id="locationA" type="text" placeholder="Location" required>
+                        <input id="imageA" type="text" placeholder="Image" required>
+                        <input id="planA" type="text" placeholder="Plan" required>
+                        <input id="PriceA" type="text" placeholder="Price" required>
+                        <input id="countryA" type="text" placeholder="Country" required>
+                        <input id="descriptionA" type="text" placeholder="Description" required>
+                        <input class="submit" type="submit">
+                    </form>
+                </div>
+            </div>
+        
+            <div class="update" style="display: block;">
+                <div class="form">
+                    <div>
+                        <h2>Update Data</h2>
+                        <button class="add_update" id="add">Add Data?</button>
+                    </div>
+                    <form id="update_form" action="">
+                        <input id="idU" type="text" placeholder="ID">
+                        <input id="locationU" type="text" placeholder="Location" required>
+                        <input id="imageU" type="text" placeholder="Image" required>
+                        <input id="planU" type="text" placeholder="Plan" required>
+                        <input id="PriceU" type="text" placeholder="Price" required>
+                        <input id="countryU" type="text" placeholder="Country" required>
+                        <input id="descriptionU" type="text" placeholder="Description" required>
+                        <input class="submit" type="submit">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <button id="slide-btn"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
+        <div id="slide-div">
+            <button id="close-btn">Close</button>
+            <div class="products">
+                <div class="searchtitle">
+                    <input type="text" id="search" placeholder="Search Any Place">
+                </div>
+                <div class="results" style="display: none;">
+                    <h1 id="resH1">Search Something</h1>
+                </div>
+                <div class="cardlist">
+                    <!-- append here  -->
+                </div>
+                <div class="pagination">
+                    <!-- append pagination btns  -->
+                </div>
+            </div>
+        </div>
+      </div>
+    
 </body>
+<script src="/Scripts/admin.js"></script>
+<script src="https://kit.fontawesome.com/b2fe669610.js" crossorigin="anonymous"></script>
 </html>
-<script src="../Scripts/admin.js" ></script>
 
 <!-- {"location":"New Delhi","image":"https://img.theculturetrip.com/wp-content/uploads/2022/01/dar8f9-e1645841652265.jpg",
     "plan":"3Days 2Nights",

@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// for logo on load 
+// for logo on load and add CSS part as well
 const travelo = document.getElementById("travelo");
 const text = travelo.textContent;
 const letters = text.split("");

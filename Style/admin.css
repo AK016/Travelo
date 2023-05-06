@@ -1,93 +1,374 @@
-*{
-    padding : 0px;
-    margin:  0px;
-    box-sizing:  border-box;
+body {
+  margin: 0px;
+  padding: 0px;
+  /* width: 70%; */
+  background-color:rgb(238, 238, 238);
+}
+
+.part1 {
+  background-color: rgb(180, 180, 180);
+  min-height: 200px;
+  margin-top: -30px;
+}
+
+.nav hr {
+  width: 80%;
+  border: 1.5px solid black;
+}
+.nav{
+  position: sticky;
+  top: 0;
+  background-color: rgb(249, 249, 249);
+  /* background-color: white; */
+}
+.nav::-webkit-scrollbar{
+  background-color: white;
+}
+nav {
+  width: 80%;
+  display: flex;
+  margin: -10px auto;
+  justify-content: space-between;
+  
+}
+#logo a {
+    text-decoration: none;
+    color: royalblue;
+
+}
+
+#logo h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    margin-top:10px;
+    font-size: 30px;
+    /* background-color: rgb(249, 249, 249); */
+    color: rgb(11, 11, 13);
+}
+
+.anchors {
+    margin-right: -90px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.anchorsubs {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.anchorsubs a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+}
+/* travelo logo on load  */
+#travelo {
+  overflow: hidden;
+}
+
+#travelo span {
+  display: inline-block;
+  opacity: 0;
+  animation: reveal 3s ease forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 
-.admin_container{
-    /* border: 1px solid red; */
+
+
+.add {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform : translate(-50%,-50%);
-  display :flex;
-  width:  570px;
+  transform: translate(-50%, -50%);
+  margin-top: 60px;
+
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: white;
+  padding: 30px;
   box-shadow: 0 50px 50px -50px darkslategray;
-margin-top: 60px;
 }
+
+#admin_form {
+  width: 400px;
+  margin-right: 30px;
+}
+
+#admin_form h2 {
+  color: #1c1c1e;
+  margin-bottom: 20px;
+}
+
 #admin_form input {
-    border:  none;
-    outline : none;
-    border-radius:  1%;
-    width: 90%;
-    border-bottom: 2px solid black;
-    margin-bottom: 25px;
-    padding: 7px 0;
-    font-size:  14px;
-    padding-left: 20px;
-    height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  width: 100%;
+  border-bottom: 2px solid #1c1c1e;
+  margin-bottom: 25px;
+  padding: 7px 0;
+  font-size: 14px;
+}
 
+.submit {
+  color: white;
+  background-color: #1c1c1e;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 5px 12px;
+  font-weight: 500;
+}
+
+#admin_form input[type="text"] {
+  font-size: 25px;
+  /* set the font size of the input text */
+  padding: 10px;
+  /* set the padding around the input text */
+}
+
+.form h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* update data  */
+.update {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 50px 50px -50px darkslategray;
+}
+
+#update_form {
+  width: 400px;
+  margin-right: 30px;
+}
+
+#update_form h2 {
+  color: #1c1c1e;
+  margin-bottom: 20px;
+}
+
+#update_form input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  width: 100%;
+  border-bottom: 2px solid #1c1c1e;
+  margin-bottom: 25px;
+  padding: 7px 0;
+  font-size: 14px;
+}
+#update_form input[type="text"] {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.add_update{
+  height: 35px;
+  width: 150px;
+  border: none;
+  background-color: rgb(249, 249, 249);
+  font-size: 22px;
+  border-radius: 20px;
+}
+.form div{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* slide button  */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left-div {
+  width: 40%;
+  height: 200px;
+  /* background-color: #ccc; */
+}
+
+
+#slide-btn {
+  position: absolute;
+  height: 35px;
+  width: 50px;
+  border: none;
+  /* background-color: black; */
+  font-size: 22px;
+  color: white;
+  /* border-radius: 10px; */
+  right: 10px;
+  top:20px;
+
+  cursor: pointer;
+}
+
+#slide-div {
+  position: absolute;
+  top: 80px;
+  right: -200px;
+  width: 60%;
+  height: 100%;
+  background-color: #f2f2f2;
+  transition: right 0.5s ease-in-out;
+  display: none;
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 35px;
+  width: 100px;
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
 
-.submit{
-    background-color: blue;
+
+/* slide div dom where products appears */
+.products{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
 }
 
 
-div.admin_container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 50px 50px -50px darkslategray;
-  }
-  
-  #admin_form{
-    width: 500px;
-    margin-right: 30px;
-  }
-  
-  #admin_form h2{
-    color: #1c1c1e;
-    margin-bottom: 20px;
-  }
-  
-  #admin_form input{
-    border: none;
-    outline: none;
-    border-radius: 0;
-    width: 100%;
-    border-bottom: 2px solid #1c1c1e;
-    margin-bottom: 25px;
-    padding: 7px 0;
-    font-size: 14px;
-  }
-.submit{
-    color: white;
-    background-color: #1c1c1e;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    font-size: 14px;
-    padding: 5px 12px;
-    font-weight: 500;
-  }
-  #admin_form input[type="text"] {
-    font-size: 25px; /* set the font size of the input text */
-    padding: 10px; /* set the padding around the input text */
-  }
-  .form h2{
-    
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
+/* display dom part  */
+.cardlist{
+  display: flex;
+  flex-direction: column;
+}
+.card{
+  width: 90%;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.cardImg img{
+  min-width: 299px;
+  max-width: 350px;
+  min-height: 230px;
+  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.cardImg img:hover{
+  transform: scale3d(1.1, 1.1, 1);
+}
+.cardBody{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.location{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+.country{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  margin-top: -18px;
+}
+.price{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+.plan{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: -13px;
+  margin-bottom: 25px;
+}
+.description{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  margin-top: -15px;
+  text-align: justify;
+}
+
+.del{
+  height: 40px;
+  width: 200px;
+  margin-left: 30%;
+  border: none;
+  font-size: 22px;
+  border-radius: 10px;
+}
+.del:hover{
+  background-color: aliceblue;
+}
+
+.pagination{
+  /* border: 2px red solid; */
+  width: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.pagination a{
+  background-color: aliceblue;
+  padding: 5px;
+  text-decoration: none;
+  color: red;
+  border-radius: 5px;
+  font-size: 28px;
+}
+
+
+#search{
+  width: 400px;
+  height: 40px;
+  margin-left: 35%;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  font-size: 24px;
+}
+.results{
+  text-align: center;
+  margin-bottom: -30px;
+}
+
