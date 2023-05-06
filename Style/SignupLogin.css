@@ -1,31 +1,243 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    margin-top:10% ;
-}
 
 #container {
     height: 500px;
-    width: 600px;
-    border: 2px solid red;
-    display: flex;
-    justify-content: space-around;
-    /* margin-top: 20%; */
-}
-
-#container>div input{
+    width: 900px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    margin: auto;
+    /* margin-left: 20%; */
+     margin-top: 5%;
+    
+  }
+  
+  #container>div input{
      display: block;
-     width: 200px;
+     width: 300px;
      height: 30px;
-     margin-bottom: 10px;
-     /* border-radius: 40%; */
-
-}
-#container>div{
-    margin-top: 10%;
-}
-
+     margin-bottom: 20px;
+     border-radius: 3px;
+     border: 0.1px solid rgb(116, 113, 113);
+     margin-top: 5px;
+  
+  }
+  
+  /* input:focus(){
+    border:palevioletred;
+  } */
+  
+  #sign-up {
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color:#F9F9F9;
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+  }
+  
+  #sign-in{
+     padding-left: 10px;
+    box-sizing: border-box;
+    background-color:#F9F9F9;
+  }
+  
+  #admin{
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color:#F9F9F9;
+  }
+  
+  #adminLogin{
+    background-color:black;
+    color: white;
+  }
+  
+  #userLogin{
+    
+    color: red;
+    margin-top: 10px;
+    
+  }
+  
+  #submit {
+    border: 2px solid red;
+    width: 306.4px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.1px solid rgb(116, 113, 113);
+    background-color:black;
+    color: white;
+  
+  }
+  
+   #sign-in-submit{
+    width: 306.4px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.1px solid rgb(116, 113, 113);
+    background-color:black;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+   #admin-submit{
+    width: 306.4px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.1px solid rgb(116, 113, 113);
+    background-color:black;
+    color: white;
+    margin-top: 10px;
+   }
+  
+   a {
+    color: red;
+   }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: 500px;
+  }
+  .slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .desktop{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  @-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+  
+    to {
+        opacity: 1
+    }
+  }
+  
+  @keyframes fade {
+    from {
+        opacity: .4
+    }
+  
+    to {
+        opacity: 1
+    }
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px 12px;
+    transform: translateY(-50%);
+    color: #575757;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  /******************************************************navbar*************************************************** */
+  
+  .nav hr {
+    width: 80%;
+    border: 1.5px solid black;
+  }
+  .nav{
+    position: sticky;
+    top: 0;
+    background-color: rgb(249, 249, 249);
+    /* background-color: white; */
+  }
+  .nav::-webkit-scrollbar{
+    background-color: white;
+  }
+  nav {
+    width: 80%;
+    display: flex;
+    margin: -10px auto;
+    justify-content: space-between;
+    
+  }
+  #logo a {
+      text-decoration: none;
+      color: royalblue;
+  
+  }
+  
+  #logo h1 {
+      font-family: 'Courier New', Courier, monospace;
+      margin-left: 20px;
+      margin-top:10px;
+      font-size: 30px;
+      /* background-color: rgb(249, 249, 249); */
+      color: rgb(11, 11, 13);
+  }
+  
+  .anchors {
+      margin-right: -90px;
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .anchorsubs {
+      display: flex;
+      flex-direction: column;
+      margin-right: 100px;
+  }
+  
+  .anchorsubs a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      margin-top: 5px;
+  }
+  /* travelo logo on load  */
+    #travelo {
+      overflow: hidden;
+    }
+    
+    #travelo span {
+      display: inline-block;
+      opacity: 0; 
+      animation: reveal 3s ease forwards; 
+    }
+    
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+  /******************************************************xxxxxxxxx*************************************************** */
+  
 
