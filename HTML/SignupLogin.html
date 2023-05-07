@@ -5,117 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Style/SignupLogin.css">
+    <link rel="stylesheet" href="SignupLogin.css">
 </head>
 <body>
-    <!--------------------------------------------------------Navbar--------------------------------------------------->
-      <div class="nav">
-        <hr>
-        <nav>
-            <div id="logo">
-                <a href="./index.html">
-                    <h1 id="travelo">Travelo</h1>
-                </a>
-            </div>
-            <div class="anchors">
-                <div class="anchorsubs">
-                    <a href="./index.html">Home</a>
-                </div>
-                <div class="anchorsubs">
-                    <a href="./product.html">Destination</a>
-                    <!-- <a href="#part3" id="features">Features</a> -->
-                </div>
-                <div class="anchorsubs">
-                    <a href="#">Pricing</a>
-                    <!-- <a href="#">Reviews</a> -->
-                </div>
-                <div class="anchorsubs">
-                    <a href="#part7" id="aboutus">About Us</a>
-                </div>
-                <div class="anchorsubs">
-                    <a href="#" id="email-link">CONTACT US <i class="fa-solid fa-circle-arrow-right fa-beat"
-                            style="color: #000000;"></i></a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-----------------------------------------------------***************---------------------------------------------->
-    
-    <!----------------------------------------------------LoginDiv------------------------------------------------------>
-    
-        <div id="container">
-            <div id="sign-up">
-                <h2>Sign Up</h2>
-                <form action="#">
-                    <label for="firstName">First Name</label>
-                    <input type="text" placeholder="Enter your First Name" id="firstName">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" placeholder="Enter your Last Name" id="lastName">
-                    <label for="sign-up-email">Email</label>
-                    <input type="email" placeholder="Enter your Email" id="sign-up-email">
-                    <label for="sign-up-password">Create Password</label>
-                    <input type="password" name="" placeholder="Password" id="sign-up-password">
-                    <button id="submit">Sign Up</button>
-                </form>
-                <p>Already have an account?<a id="sign-in-btn" href="#"> Sign In</a></p>
-                <hr>
-                <button id="adminLogin">Login as Admin</button>
-                 
-            </div>
-            <div id="admin"style="display: none;">
-                <form action="#">
-                    <h2>Admin Panel</h2>
-                    <label for="id">Admin Id</label>
-                    <input type="text"placeholder="Admin Id" id="id">
-                    <label for="adminpass">Password</label>
-                    <input type="password"  id="adminpass" placeholder="Password">
-                    <button id="admin-submit">Sign In</button>
-                </form>
-                <br>
-               <p>Not an admin?<a id="userLogin" href="#"> User Sign In</a></p>
-            </div>
-            <div id="sign-in" style="display: none;">
-                <h2>Sign In</h2>
-                <br>
-                <form action="#">
-                <label for="sign-in-email">Enter your Email</label>
-                <input type="sign-in-email" placeholder="Email" id="sign-in-email">
-                <label for="sign-in-password">Enter Password</label>
-                <input type="password" placeholder="Password" id="sign-in-password">
-                <button id="sign-in-submit">Sign In</button>
-                </form>
-                <p>Do not have an account?<a id="sign-up-btn" href="#"> Sign Up</a></p>
-            </div>
-            <div class="banner-box">  
-                <div class="slideshow-container">
-                
-                    <div class="slide fade">
-                      <a href="#"><img class="desktop" src="https://i.pinimg.com/736x/11/ac/8e/11ac8e9c18240186f683be57059ed1f6.jpg"></a>
-                    </div>
-                    <div class="slide fade">
-                      <a href="#"><img class="desktop" src="../images/Screenshot 2023-05-06 055948.png"></a>
-                    </div>
-                    <div class="slide fade">
-                      <a href="#"><img class="desktop" src="../images/Screenshot 2023-05-06 042701.png"></a>
-                    </div>
-                    <div class="slide fade">
-                        <a href="#"><img class="desktop" src="../images/Screenshot 2023-05-06 043011.png"></a>
-                      </div>
-                    
-                    
-                
-                    <i class="fa-solid fa-chevron-left prev"></i>
-                    <i class="fa-solid fa-chevron-right next"></i>
-                    
-                    <div class="dots">
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                    </div>
-                </div>
-              </div>
+    <div id="container">
+        <div id="sign-up">
+            <h1>Sign Up</h1>
+            <form action="#">
+                <input type="text" name="" placeholder="Enter your Fullname" id="username">
+                <input type="email" name="" placeholder="Enter your Email" id="sign-up email">
+                <input type="password" name="" placeholder="Pick a password" id="sign-up-password">
+            </form>
         </div>
-    </body>
-<script src="../Scripts/SignupLogin.js"></script>
+        <div id="sign-in">
+            <h1>Sign In</h1>
+            <form action="#">
+            <input type="email" placeholder="Email" id="sign-in-email">
+            <input type="password" placeholder="Password" id="sign-in-password">
+            </form>
+            
+        </div>
+    </div>
+</body>
+<script src="./SignupLogin.js"></script>
 </html>
