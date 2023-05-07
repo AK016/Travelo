@@ -160,6 +160,57 @@
   .next {
     right: 0;
   }
+
+  @media only screen and (max-width:500px) {
+    #container{
+      grid-template-rows:repeat(2,1fr);
+      grid-template-columns: repeat(1,1fr);
+      width: 80%;
+      row-gap: 10px;
+      border-radius: 0px;
+    }
+    .desktop{
+      border-radius: 0px;
+    }
+    #container>div input{
+      width: 85%;
+    }
+    #submit{
+      width: 85%;
+    }
+    nav .anchors{
+      display: none;
+    }
+    #logo{
+      margin: auto;
+    }
+     
+  }
+  @media only screen and (min-width:500px) and (max-width:800px){
+    #container{
+      grid-template-rows:repeat(2,1fr);
+      grid-template-columns: repeat(1,1fr);
+      width: 80%;
+      row-gap: 10px;
+      border-radius: 0px;
+    }
+    .desktop{
+      border-radius: 0px;
+    }
+    #container>div input{
+      width: 85%;
+    }
+    #submit{
+      width: 85%;
+    }
+    nav .anchors{
+      display: none;
+    }
+    #logo{
+      margin: auto;
+    }
+   
+  }
   
   /******************************************************navbar*************************************************** */
   

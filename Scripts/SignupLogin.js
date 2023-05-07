@@ -137,7 +137,7 @@ adminSubmit.addEventListener("click",(e)=>{
   if(adminobj.id==AdminCredentials.Id && adminobj.pass==AdminCredentials.password){
      
     alert("Admin login successful..!")
-    location.href="#"
+    window.location.href="#"
   }
   else{
 
