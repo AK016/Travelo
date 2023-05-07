@@ -16,27 +16,27 @@ Content-Type: application/json
 } 
 
 
-const cartDiv = document.getElementById('product-page');
-const cart = document.getElementById('cart');
+# const cartDiv = document.getElementById('product-page');
+# const cart = document.getElementById('cart');
 
-cartDiv.addEventListener('scroll', function() {
-  if (cartDiv.scrollTop === 0) {
-    cartDiv.classList.add('fixed');
-    cart.classList.remove('fixed');
-  } else {
-    cartDiv.classList.remove('fixed');
-    cart.classList.add('fixed');
-  }
-});
+# cartDiv.addEventListener('scroll', function() {
+#   if (cartDiv.scrollTop === 0) {
+#     cartDiv.classList.add('fixed');
+#     cart.classList.remove('fixed');
+#   } else {
+#     cartDiv.classList.remove('fixed');
+#     cart.classList.add('fixed');
+#   }
+# });
 
-cart.addEventListener('scroll', function() {
-  if (cart.scrollTop === 0) {
-    cart.classList.add('scrollable');
-    cartDiv.classList.remove('fixed');
-    cart.classList.remove('fixed');
-  } else {
-    cart.classList.remove('scrollable');
-    cartDiv.classList.add('fixed');
-    cart.classList.add('fixed');
-  }
-});
+# cart.addEventListener('scroll', function() {
+#   if (cart.scrollTop === 0) {
+#     cart.classList.add('scrollable');
+#     cartDiv.classList.remove('fixed');
+#     cart.classList.remove('fixed');
+#   } else {
+#     cart.classList.remove('scrollable');
+#     cartDiv.classList.add('fixed');
+#     cart.classList.add('fixed');
+#   }
+# });

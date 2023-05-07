@@ -43,8 +43,20 @@ let PaginationWrapper = document.querySelector(".pagination")
 let mainbody = document.querySelector(".cardlist")
 let url = "https://644fd9a0ba9f39c6ab6e09a7.mockapi.io/travelplan"
 let currentPage = 1;
-let rowsPerPage = 3;
-
+let rowsPerPage=3;
+function updatepagination(){
+    if (window.matchMedia("(min-width: 1019px)").matches) {
+        // For tablets and larger screens, show 4 per page
+        rowsPerPage = 3;
+    }
+    else if(window.matchMedia("(min-width: 768px)").matches){
+        rowsPerPage=4;
+    }
+    else if(window.matchMedia("(min-width: 320px)").matches){
+        rowsPerPage=2
+    }
+    fetchData(currentPage)
+}
 let travelodata = [];
 
 fetchData();
@@ -100,19 +112,23 @@ sorthightolow.addEventListener("click", function () {
 
 // country filter 
 let country = document.querySelector("#country")
+let hr=document.querySelector("#hr");
 country.addEventListener("input", function () {
     let searchValue = country.value.trim().toLowerCase();
     let results = document.querySelector(".results")
     if (searchValue == "") {
         display(travelodata);
         results.style.display = "none"
+        hr.style.display="block"
     } else {
         let temp = travelodata.filter(function (el) {
             return el.country.trim().toLowerCase().includes(searchValue);
         });
         results.style.display = "block"
         let h1 = document.querySelector("#resH1");
+        hr.style.display="none"
         h1.innerText = `${temp.length} Destinations Found`
+
         display(temp);
     }
 })
@@ -144,23 +160,24 @@ cancel.addEventListener("click", function () {
     document.querySelector("#myRange").value = 1;
     results.style.display = "none";
     h1.innerText = "";
-    rangeValue.innerHTML =1;
+    rangeValue.innerHTML = 1;
     display(travelodata);
     cancel.style.display = "none";
     check.style.display = "block";
 });
 
 
-let search=document.querySelector("#search")
-let products=document.querySelector(".products")
-let searchDiv=document.querySelector(".searcgtitle")
-let resultdiv=document.querySelector(".results")
-search.addEventListener("input", function(){
+let search = document.querySelector("#search")
+let products = document.querySelector(".products")
+let searchDiv = document.querySelector(".searcgtitle")
+let resultdiv = document.querySelector(".results")
+search.addEventListener("input", function () {
     let searchValue = search.value.trim().toLowerCase();
     let results = document.querySelector(".results")
     if (searchValue == "") {
         display(travelodata);
         results.style.display = "none"
+        hr.style.display="none"
     } else {
         let temp = travelodata.filter(function (el) {
             return el.location.trim().toLowerCase().includes(searchValue);
@@ -168,21 +185,16 @@ search.addEventListener("input", function(){
         results.style.display = "block"
         let h1 = document.querySelector("#resH1");
         h1.innerText = `${temp.length} Destinations Found`
-        // products.style.marginLeft="-400px"
-        // products.style.width=""
-        products.style.display="flex"
-        products.style.flexDirection="column";
-        if(temp.length==0){
-            searchDiv.style.left="0"
-        }
+        hr.style.display="none"
         display(temp);
+
     }
 })
 
 
 
-
-
+const paymentFormContainer = document.querySelector('.payment-form-container');
+let main = document.querySelector("#main");
 
 function display(data) {
     mainbody.innerHTML = "";
@@ -217,18 +229,24 @@ function display(data) {
         desc.classList.add("description")
         let book = document.createElement("button")
         book.classList.add("booknow")
-        book.innerText = "Book Now"
+        book.innerText = "Get Details"
+        book.addEventListener('click', () => {
+            paymentFormContainer.style.display = 'block';
+            main.style.opacity = "10%"
+        });
+
 
         //update and append here 
         loc.innerText = paginatedData[i].location
-        plan.innerText = `Holiday Plan ${paginatedData[i].plan}Days-${paginatedData[i].plan-1}Nights `
+        plan.innerText = `Holiday Plan ${paginatedData[i].plan}Days-${paginatedData[i].plan - 1}Nights `
         country.innerText = paginatedData[i].country
         price.innerText = "₹" + paginatedData[i].price
         desc.innerText = paginatedData[i].description
-        cardBody.append(loc, country, price,plan, desc, book);
+        cardBody.append(loc, country, price, plan, desc, book);
         card.append(cardImg, cardBody)
         mainbody.append(card);
     }
+    // updatepagination();
     let totalPages = Math.ceil(data.length / rowsPerPage);
     let pagination = document.querySelector(".pagination");
     pagination.innerHTML = "";
@@ -243,7 +261,74 @@ function display(data) {
             event.preventDefault();
             fetchData(i);
         });
-
         PaginationWrapper.appendChild(link);
     }
+
 }
+
+
+// submit info to server 
+const thankYouContainer = document.querySelector('.thank-you-container');
+const closeButton = document.querySelectorAll('.close-button');
+
+function showThankYouMessage() {
+    thankYouContainer.style.display = 'block';
+}
+
+for (let i = 0; i < closeButton.length; i++) {
+    closeButton[i].addEventListener('click', () => {
+        thankYouContainer.style.display = 'none';
+        paymentFormContainer.style.display = "none"
+        main.style.opacity = "100%"
+    });
+}
+
+const placeOrderButton = document.querySelector('#submitinfo');
+placeOrderButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    showThankYouMessage();
+});
+
+
+
+
+
+
+
+
+
+
+
+// slide button div 
+const slideBtn = document.getElementById('slide-btn');
+const slideDiv = document.getElementById('slide-div');
+const closeBtn = document.getElementById('close-btn');
+const leftDiv = document.getElementById("left-div")
+
+slideBtn.addEventListener('click', () => {
+    // leftDiv.style.marginLeft="0px"
+    if (slideDiv.style.display === 'none') {
+        slideDiv.style.display = 'block';
+        products.style.marginLeft = "30%"
+
+    } else {
+        slideDiv.style.display = 'none';
+        products.style.marginLeft = "0%"
+    }
+});
+
+closeBtn.addEventListener('click', () => {
+    slideDiv.style.right = '-200px';
+    setTimeout(() => {
+        slideDiv.style.display = 'none';
+    }, 500);
+    slideBtn.style.display = "block"
+    products.style.marginLeft = "0%"
+});
+
+
+
+window.addEventListener("resize",function(){
+    updatepagination();
+})
+updatepagination();

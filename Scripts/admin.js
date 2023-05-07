@@ -119,23 +119,20 @@ update_form.addEventListener("submit", function (event) {
     });
 });
 
-
-// slide button div 
 const slideBtn = document.getElementById('slide-btn');
 const slideDiv = document.getElementById('slide-div');
 const closeBtn = document.getElementById('close-btn');
-const leftDiv = document.getElementById("left-div")
+const leftDiv = document.getElementById('left-div');
 
 slideBtn.addEventListener('click', () => {
-  // leftDiv.style.marginLeft="0px"
   if (slideDiv.style.display === 'none') {
     slideDiv.style.display = 'block';
-    slideBtn.style.display = "none"
+    slideBtn.style.display = 'none';
     setTimeout(() => {
-      slideDiv.style.right = '0';
+      slideDiv.style.left = '0';
     }, 0);
   } else {
-    slideDiv.style.right = '-200px';
+    slideDiv.style.left = '-60%';
     setTimeout(() => {
       slideDiv.style.display = 'none';
     }, 500);
@@ -143,12 +140,11 @@ slideBtn.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
-  slideDiv.style.right = '-200px';
+  slideDiv.style.left = '-60%';
   setTimeout(() => {
     slideDiv.style.display = 'none';
   }, 500);
-  slideBtn.style.display = "block"
-
+  slideBtn.style.display = 'block';
 });
 
 
@@ -186,9 +182,12 @@ search.addEventListener("input", function () {
   if (searchValue == "") {
     display(travelodata);
     results.style.display = "none"
-  } else {
+  }
+  else {
     let temp = travelodata.filter(function (el) {
-      return el.location.trim().toLowerCase().includes(searchValue);
+      if (el.location.trim().toLowerCase().includes(searchValue) || el.country.trim().toLowerCase().includes(searchValue)) {
+        return true;
+      }
     });
     results.style.display = "block"
     let h1 = document.querySelector("#resH1");
@@ -199,6 +198,7 @@ search.addEventListener("input", function () {
     products.style.flexDirection = "column";
     if (temp.length == 0) {
       searchDiv.style.left = "0"
+      
     }
     display(temp);
   }
@@ -270,8 +270,7 @@ function display(data) {
     mainbody.append(card);
   }
   let totalPages = Math.ceil(data.length / rowsPerPage);
-  let pagination = document.querySelector(".pagination");
-  pagination.innerHTML = "";
+  PaginationWrapper.innerHTML = "";
   for (let i = 1; i <= totalPages; i++) {
     let link = document.createElement("a");
     link.href = "#";
