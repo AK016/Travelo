@@ -72,13 +72,44 @@ travelo.innerHTML = html;
 
 // contact us on email 
 const emailLink = document.getElementById('email-link');
-  emailLink.addEventListener('click', (event) => {
+emailLink.addEventListener('click', (event) => {
     event.preventDefault();
     window.location.href = 'mailto:akshaykadam9010@gmail.com';
 });
 
 
 
+
+// user name appearing 
+let signInElement = document.querySelector("#SignInUsername");
+
+let LSSignIn = JSON.parse(localStorage.getItem("SignInUsername")) || [];
+if (LSSignIn.length !== 0) {
+    signInElement.innerText = `Hi, ${LSSignIn} | Sign Out`;
+    signInElement.href = "#";
+    signInElement.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Clear the stored username from local storage
+        localStorage.removeItem("SignInUsername");
+    
+        // Navigate to the login page
+        window.location.href = "/HTML/SignupLogin.html";
+    });
+}
+else {
+    signInElement.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Navigate to the login page
+        window.location.href = "/HTML/SignupLogin.html";
+    });
+}
+
+
+// joinwithus 
+let joinwithus=document.querySelector("#joinwithus")
+joinwithus.addEventListener("click",function(){
+    location.href="/HTML/SignupLogin.html"
+})
 
 
 window.onload = function () {

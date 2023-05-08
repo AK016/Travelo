@@ -53,7 +53,7 @@ updateDiv.style.transition = "opacity 1s ease-in-out";
 
 
 ad_form.addEventListener("submit", function (event) {
-  // event.preventDefault();
+  event.preventDefault();
 
   let location = document.querySelector("#locationA").value;
   let image = document.querySelector("#imageA").value;
@@ -80,13 +80,14 @@ ad_form.addEventListener("submit", function (event) {
   })
     .then((res) => { return res.json() })
     .then((data) => {
+      alert("Data Added Successfully")
       console.log(data, "add")
       fetchData();
     })
 });
 
 update_form.addEventListener("submit", function (event) {
-  // event.preventDefault();
+  event.preventDefault();
 
   let id = document.querySelector("#idU").value;
   let location = document.querySelector("#locationU").value;
@@ -113,10 +114,13 @@ update_form.addEventListener("submit", function (event) {
       console.log(data, "update")
       alert("Updated Succesfully")
       fetchData();
+      display(data);
+      location.reload();
     })
     .catch((error) => {
       console.error('Error:', error);
     });
+    
 });
 
 const slideBtn = document.getElementById('slide-btn');
@@ -241,7 +245,8 @@ function display(data) {
     del.classList.add("del")
 
     del.innerText = "Delete"
-    del.addEventListener("click", function () {
+    del.addEventListener("click", function (e) {
+      e.preventDefault()
       let delId = paginatedData[i].id
       fetch(`${url}/${delId}`, {
         method: "DELETE"
@@ -252,6 +257,7 @@ function display(data) {
         .then(function (data) {
           // location.reload();
           fetchData();
+          alert("Deleted Successfully")
           display(data);
         })
         .catch(function (e) {
