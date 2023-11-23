@@ -3,7 +3,7 @@
 Welcome to Travelo, the perfect companion for your travel adventures! Plan, discover, and book your dream vacations with ease.
 
 ## Homepage
-[Screenshot 2023-11-23 100222](https://github.com/AK016/Travelo/assets/123861375/a4069647-1132-4ccd-9734-8b377acb2683)
+![Homepage](https://github.com/AK016/Travelo/assets/123861375/a4069647-1132-4ccd-9734-8b377acb2683)
 
 Our homepage is designed to inspire and guide you through the fantastic world of travel. Discover featured destinations, latest travel trends, and exclusive offers that will make your next journey unforgettable.
 
