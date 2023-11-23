@@ -8,7 +8,7 @@ Welcome to Travelo, the perfect companion for your travel adventures! Plan, disc
 Our homepage is designed to inspire and guide you through the fantastic world of travel. Discover featured destinations, latest travel trends, and exclusive offers that will make your next journey unforgettable.
 
 ## Destinations
-[Screenshot 2023-11-23 100243](https://github.com/AK016/Travelo/assets/123861375/f6a652cb-2474-41c5-b3f8-b3a4f3e337d4)
+![Destinations](https://github.com/AK016/Travelo/assets/123861375/f6a652cb-2474-41c5-b3f8-b3a4f3e337d4)
 
 
 Explore our diverse range of travel packages and destinations on the Destinations page. From exotic beaches to cultural landmarks, Travelo offers a variety of options to suit every traveler's taste. Each destination comes with detailed information, photos, and pricing to help you make an informed decision.
