@@ -33,6 +33,6 @@ Visit [Travelo Live](https://travelowithus.netlify.app/index.html) to start your
 Explore our API [here](https://644fd9a0ba9f39c6ab6e09a7.mockapi.io/travelplan) for a deeper integration with Travelo. Developers can leverage the API to enhance the website's functionality and provide an even more personalized experience for users.
 
 ## Feedback
-We value your feedback! If you have any suggestions, questions, or encounter any issues, please reach out to us through our [contact page](#).
+We value your feedback! If you have any suggestions, questions, or encounter any issues, please reach out to us through our [contact page](mailto:akshaykadam9010@gmail.com).
 
 Happy Travels with Travelo! 🌍✈️
