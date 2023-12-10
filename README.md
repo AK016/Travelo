@@ -38,4 +38,3 @@ We value your feedback! If you have any suggestions, questions, or encounter any
 
 Happy Travels with Travelo! 🌍✈️
 
-
